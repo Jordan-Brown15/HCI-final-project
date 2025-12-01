@@ -82,7 +82,12 @@ const upcoming_list = document.getElementById("task-list");
 function renderUpcoming() {
   upcoming_list.innerHTML = "";
 
+  let now = new Date();
   tasks.forEach((task) => {
+    if (now > new Date(task.endTime)) {
+      return;
+    }
+
     const task_div = document.createElement("div");
     task_div.classList.add("task");
     task_div.innerHTML = `
@@ -197,6 +202,11 @@ function renderMessages() {
 // Main
 function addTask(task) {
   tasks.push(task);
+  tasks = tasks.sort((a, b) => {
+    const dateA = new Date(a.startTime);
+    const dateB = new Date(b.startTime);
+    return dateA - dateB;
+  });
   renderCalendar();
   renderUpcoming();
 }
