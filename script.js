@@ -421,7 +421,7 @@ let messages = [
   {
     user: "AI",
     content:
-      "Hello I am your AI assistant. I help you do various task. For example ask me add a task. Or summarize your schedule for the next week.",
+      "Hello I am your AI assistant. I help you with your schedule. For example ask me add a task. Or, paste in your syllabus and I will add any relevant events. Afterward you can ask me summarize your schedule for the next week.",
   },
 ];
 

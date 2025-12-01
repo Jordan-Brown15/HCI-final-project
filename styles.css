@@ -57,6 +57,15 @@ main {
       "calendar chat";
     grid-template-columns: 1fr 400px;
   }
+
+  html,
+  body {
+    height: auto;
+  }
+
+  #task-list {
+    flex-direction: row !important;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -66,7 +75,7 @@ main {
       "calendar"
       "chat";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto 500px 500px;
   }
 }
 
